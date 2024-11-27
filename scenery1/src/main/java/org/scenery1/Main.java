@@ -35,8 +35,6 @@ public class Main {
         Person claudia = new Person("Claudia", sigrid);
         martin.spouse(new Person("Carla"));
         martin.addChild(new Person("Nicolas"));
-
-        // não comprendi porque no modelo do Notion tem um inteiro 0 sendo passado como parâmetro
-        lily.printFamilyTree();
+        lily.printFamilyTree(0);
     }
 }

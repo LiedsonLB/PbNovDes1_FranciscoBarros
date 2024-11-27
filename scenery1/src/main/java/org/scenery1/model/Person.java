@@ -32,8 +32,13 @@ public class Person {
         this.children.add( child );
     }
 
-    public void printFamilyTree() {
+    public void printFamilyTree(int depth) {
+        for( int i = 0; i < depth; i++ ) {
+            System.out.print( "  " );
+        }
+
         System.out.print( this.name );
+
         if( this.spouse != null ) {
             System.out.print( " -- Married to: " + this.spouse.name );
         } else {
@@ -43,8 +48,11 @@ public class Person {
         if(!this.children.isEmpty()) {
             System.out.print( " -- Children: \n" );
             for( Person child : this.children ) {
-                child.printFamilyTree();
+                child.printFamilyTree( depth + 1 );
             }
+        }
+        if(this.spouse != null  && this.children.isEmpty()) {
+            System.out.print( "\n" );
         }
     }
 }
