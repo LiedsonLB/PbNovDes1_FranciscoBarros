@@ -33,6 +33,18 @@ public class Person {
     }
 
     public void printFamilyTree() {
-        System.out.println( "aqui vai ser a arvore" );
+        System.out.print( this.name );
+        if( this.spouse != null ) {
+            System.out.print( " -- Married to: " + this.spouse.name );
+        } else {
+            System.out.print( " -- Single \n" );
+        }
+        // se a pessoa tem filhos imprime os filhos e os filhos dos filhos recursivamente
+        if(!this.children.isEmpty()) {
+            System.out.print( " -- Children: \n" );
+            for( Person child : this.children ) {
+                child.printFamilyTree();
+            }
+        }
     }
 }
