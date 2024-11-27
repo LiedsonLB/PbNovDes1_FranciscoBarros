@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Person {
     private String name;
-    private Person spouse;
+    private Person spouse = null;
     private Person parent;
     private List<Person> children;
 
@@ -17,6 +17,11 @@ public class Person {
     public  Person( String name, Person parent ) {
         this(name);
         this.parent = parent;
+        parent.addChild( this );
+    }
+
+    public String name() {
+        return this.name;
     }
 
     public void spouse( Person spouse ) {
@@ -28,18 +33,6 @@ public class Person {
     }
 
     public void printFamilyTree() {
-        System.out.println( this.name );
-        if( this.spouse != null ) {
-            System.out.println( "Spouse: " + this.spouse.name );
-        }
-        if( this.parent != null ) {
-            System.out.println( "Parent: " + this.parent.name );
-        }
-        if( this.children.size() > 0 ) {
-            System.out.println( "Children: " );
-            for( Person child : this.children ) {
-                System.out.println( child.name );
-            }
-        }
+        System.out.println( "aqui vai ser a arvore" );
     }
 }
