@@ -1,5 +1,5 @@
 # Configurações do IntelliJ IDEA
-.idea/
+.idea
 
 # Diretório de build do Maven
 scenery1/target/
