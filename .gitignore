@@ -1,0 +1,11 @@
+# Configurações do IntelliJ IDEA
+.idea/
+
+# Diretório de build do Maven
+scenery1/target/
+
+# Arquivos temporários do sistema
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
