@@ -15,7 +15,22 @@ public class Gondola {
         return num;
     }
 
+    public Person getSeat1() {
+        return seat1;
+    }
+
+    public Person getSeat2() {
+        return seat2;
+    }
+
     public boolean addPassenger(Person passenger) {
+        if (seat1 == null) {
+            seat1 = passenger;
+            return true;
+        } else if (seat2 == null) {
+            seat2 = passenger;
+            return true;
+        }
         return false;
     }
 }
