@@ -33,4 +33,8 @@ public class Gondola {
         }
         return false;
     }
+
+    public boolean isFull() {
+        return seat1 != null && seat2 != null;
+    }
 }
