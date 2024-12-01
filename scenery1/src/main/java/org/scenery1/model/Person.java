@@ -44,7 +44,7 @@ public class Person {
         } else {
             System.out.print( " -- Single \n" );
         }
-        // se a pessoa tem filhos imprime os filhos e os filhos dos filhos recursivamente
+
         if(!this.children.isEmpty()) {
             System.out.print( " -- Children: \n" );
             for( Person child : this.children ) {
