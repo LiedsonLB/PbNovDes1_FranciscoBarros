@@ -1,0 +1,18 @@
+CREATE TABLE Pessoa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    father INT,
+
+    CONSTRAINT fk_pessoa_pai FOREIGN KEY (father) REFERENCES Pessoa(id) ON DELETE SET NULL
+);
+
+CREATE TABLE Gondola (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    num INT NOT NULL UNIQUE,
+    seat1 INT,
+    seat2 INT,
+
+    CONSTRAINT fk_seat1 FOREIGN KEY (seat1) REFERENCES Pessoa(id) ON DELETE SET NULL,
+    CONSTRAINT fk_seat2 FOREIGN KEY (seat2) REFERENCES Pessoa(id) ON DELETE SET NULL
+);
