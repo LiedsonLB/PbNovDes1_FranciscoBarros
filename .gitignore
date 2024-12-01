@@ -4,6 +4,8 @@ out
 
 # Diretório de build do Maven
 scenery1/target/
+scenery2/target/
+scenery4/target/
 
 # Arquivos temporários do sistema
 *.log
