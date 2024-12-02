@@ -1,14 +1,10 @@
 # Configurações do IntelliJ IDEA
 .idea/
-out
+*.iml
+out/
 
 # Diretório de build do Maven
-scenery1/target/
-scenery1/scenery1.iml
-scenery2/target/
-scenery2/scenery2.iml
-scenery4/target/
-scenery4/scenery4.iml
+**/target/
 
 # Arquivos temporários do sistema
 *.log
